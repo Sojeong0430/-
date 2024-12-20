@@ -1,0 +1,90 @@
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav, main{
+    padding: 1em;
+    margin: 1em;
+}
+
+header {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: linear-gradient(to right, #000, #ff1493);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+article {
+    width: 80%;
+    max-width: 800px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    background: #fff;
+}
+
+.diphylleia-regular {
+    font-family: 'Diphylleia', serif;
+}
+
+footer {
+    text-align: right;
+    padding: 2em 1em;
+}
+
+.footer-logo {
+    width: 200px;
+    cursor: pointer;
+}
+
+.logo-container {
+    text-align: center;
+    margin: px 0;
+}
+
+.logo {
+    width: 700px; 
+    height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+}
+

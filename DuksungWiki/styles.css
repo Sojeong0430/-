@@ -1,0 +1,114 @@
+body {
+    font-family: 맑은 고딕;
+    line-height: 1.6;
+    margin: 0; 
+    padding: 0; 
+}
+
+header, nav, main {
+    padding: 1em;
+    margin: 1em;
+}
+
+header {
+    margin: 0; 
+    padding: 0; 
+    text-align: center;
+}
+
+nav {
+    background: linear-gradient(to right, #000, #ff1493); /* 검정색에서 진분홍으로 그라데이션 */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /**노란색**/
+}
+
+footer {
+    text-align: right;
+    padding: 2em 1em;
+}
+
+.footer-logo {
+    width: 200px;
+    cursor: pointer;
+}
+
+p{
+    text-align:center;
+}
+
+.logo-container {
+    text-align: center;
+    margin: px 0;
+}
+
+.logo {
+    width: 700px; 
+    height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+}
+
+.iframe-container {
+    position: relative;
+    width: 80%; 
+    max-width: 800px; 
+    height: auto;
+    border-radius: 20px; 
+    border: 2px solid #c0c0c0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px; 
+    padding: 10px; 
+}
+
+.iframe-content {
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.iframe-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    border: 2px solid #b01055; 
+    object-fit: cover; 
+    margin-right: 20px; 
+}
+
+.iframe-description {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+/*폰트입니당*/
+.diphylleia-regular {
+    font-family: 'Diphylleia', serif; 
+}

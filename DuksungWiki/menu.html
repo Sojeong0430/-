@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 메뉴</title>
+
+    <!--구글 폰트-->
+    <link rel="stylesheet" href="substyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+    <!--구글이 준 코드입니당-->
+    <style>
+        table{
+            border: 3px solid darkred;
+            color: darkred;
+        }
+        th,td{
+            border : 1px solid darkred;
+            text-align: center;
+        }
+        caption{
+            font-family:Times New Roman;
+        }
+        tbody{
+            font-size: 10px;
+        }
+        .cafe{
+            font-size:13px;
+            font-weight: 800;
+            color: darkred;
+        }
+        h2.todaytitle{
+            color: darkred;
+        }
+    </style>
+    
+</head>
+<body onload="showMenu()">
+    <header>
+        <h1 class="diphylleia-regular">덕성 위키</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="dukwiki.html">메인</a></li>
+            <li><a href="tmi.html">덕성 상식</a></li>
+            <li><a href="community.html">정보 공유</a></li>
+            <li><a href="dukcat.html">덕냥 제보</a></li>
+        </ul>
+    </nav>
+    <section class="content">
+        <article>
+            <p>
+            <h2 class="todaytitle"><오늘의 메뉴></h2><hr>
+                <span style="font-family:Times New Roman;font-size:20px;color: darkred;">Open Time</span><br>
+                <span class="cafe">-학생 식당 : 10:00  ~ 15:00</span><br>
+                <span class="cafe">-교직원 식당 : 10:00 ~ 14:00</span>
+            </p>
+            <script>
+                function showMenu() {
+                    const day = prompt("날짜를 입력하세요 (6/10 ~ 6/14)");
+                    const menus = {
+                        "6/10": {
+                    "학생식당": "베이컨마늘칩볶음밥,핫도그*케찹,오일파스타샐러드, 얼큰콩나물국배추김치",
+                    "교직원식당": "얼큰순두부찌개, 돈육메추리알장조림, 부추오이무침, 깍두기, 흑미밥"
+                },
+                "6/11": {
+                    "학생식당": "날치알크림파스타, 치킨까스*머스타드, 황도샐러드, 깍두기, 마늘빵, 추가밥",
+                    "교직원식당": "깻잎닭갈비, 들기름막국수, 숙주맛살겨자무침, 배추김치, 흑미밥"
+                },
+                "6/12": {
+                    "학생식당": "삼겹살김치볶음밥, 소떡소떡강정, 아이스망고샐러드, 깍두기, 파송송계란국",
+                    "교직원식당": "뼈없는감자탕, 감자탕집볶음밥, 실곤약야채무침, 마늘쫑*마늘짱아찌무침, 배추김치"
+                },
+                "6/13": {
+                    "학생식당": "불닭마요덮밥,생선까스*타르타르,참나물유자무침,배추김치,우동국",
+                    "교직원식당": "초계국수,떡갈비조림,브로콜리*초장,열무김치,추가밥"
+                },
+                "6/14": {
+                    "학생식당": "바베큐폭찹,고구마후레이크맛탕,그린샐러드,피클할라피뇨,체리콕,백미밥",
+                    "교직원식당": "치즈부대찌개,수제오징어부추전,토마토두부카프레제,깍두기,백미밥"
+                }
+            };
+            const selectedMenu = menus[day];
+            if (selectedMenu) {
+                document.getElementById("day").textContent = day;
+                document.getElementById("studentMenu").textContent = selectedMenu["학생식당"];
+                document.getElementById("staffMenu").textContent = selectedMenu["교직원식당"];
+                document.getElementById("menuTable").style.display = "table";
+            } else {
+                alert("올바른 날짜를 입력하세요.");
+            }
+        }
+    </script>
+            <table id="menuTable">
+                <caption>~Today's Menu~</caption>
+                <thead>
+                    <tr>
+                        <th>날짜</th><th>학생식당</th><th>교직원식당</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="day"></td><td id="studentMenu"></td><td id="staffMenu"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+    <footer>
+        <hr><br>
+        <div class="logo-container">
+            <a href="https://www.duksung.ac.kr/main.do" target="_blank">
+                <img src="logo.png" alt="Duksung University Logo" class="footer-logo">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ducksung Cat</title>
+    <link rel="stylesheet" href="substyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+    <style>
+        section {
+            color: darkred;
+        }
+        li:active {
+            color: darkblue;
+        }
+        #float {
+            border: 1px solid black;
+            padding: 0.25em;
+            margin: 1em;
+        }
+    </style>
+    <script>
+        function clickLi(id) {
+            const mydiv = document.getElementById(id);
+
+            if(mydiv.style.display === 'none') {
+                mydiv.style.display = 'block';
+            }else {
+                mydiv.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="diphylleia-regular">덕성 위키</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="dukwiki.html">메인</a></li>
+            <li><a href="menu.html">오늘의 메뉴</a></li>
+            <li><a href="tmi.html">덕성 상식</a></li>
+            <li><a href="community.html">정보 공유</a></li>
+        </ul>
+    </nav>
+    <section class="content">
+        <article>
+            <h2>덕냥이 소개</h2>
+            <p>덕성여대의 고양이들을 소개합니다!<br>
+            (*사진을 클릭하면 에브리타임 게시물로 이동합니다)</p>
+            <ul>
+                <li onclick="clickLi('my-div1')">미고</li>
+                <div id='my-div1' style='display: none;'>
+                    <a href="https://everytime.kr/369476/v/223689665">
+                        <img src="migo.jpg" alt="미고" width="281.25" height="609">
+                    </a><br>
+                    -미스터 고의 약자<br>
+                    -에스코트 냥이로 유명함
+                </div>
+                <li onclick="clickLi('my-div2')">덕조</li>
+                <div id='my-div2' style='display: none;'>
+                    <a href="https://everytime.kr/369476/v/223689665">
+                        <img src="dukjo.jpg" alt="덕조" width="320" height="320">
+                    </a><br>
+                    -사진을 찍을 때 조신한 포즈를 취해줘서 덕조<br>
+                    -도서관, 학생회관 등에 자주 출몰
+                </div>
+                <li onclick="clickLi('my-div3')">덕설</li>
+                <div id='my-div3' style='display: none;'>
+                    <a href="https://everytime.kr/372165/v/295923223">
+                        <img src="duksul.jpg" alt="덕설" width="320" height="426.75">
+                    </a><br>
+                    -가정집으로 입양됨
+                </div>
+                <li onclick="clickLi('my-div4')">덕주</li>
+                <div id='my-div4' style='display: none;'>
+                    <a href="https://everytime.kr/369476/v/223689665">
+                        <img src="dukju.jpg" alt="덕주" width="320" height="426.75">
+                    </a><br>
+                    -덕선이 주니어의 약자<br>
+                    -17학번 봄에 태어남
+                </div>
+                <li onclick="clickLi('my-div5')">덕망</li>
+                <div id='my-div5' style='display: none;'>
+                    <a href="https://everytime.kr/369476/v/223689665">
+                        <img src="dukmang.jpg" alt="덕망" width="320" height="320">
+                    </a><br>
+                    -돌에 들어가있는 걸 좋아해서 덕망이<br>
+                    -약한 고양이를 잘 보살핌
+                </div>
+            </ul>
+        </article>
+        <article>
+            <h2>덕냥이 제보 게시판</h2>
+            <div id="float">
+                <b>미고가 오늘 나 에스코트해 주던데 원래 이래?</b><br>
+                <br>
+                기숙사 가는데 계속 울면서 따라와줌<br><br>
+                <hr>
+                <b>익명1</b><br>
+                나도 미고가 기숙사 가는데 에스코트해줌
+                <br>원래 도서관~후문에 자주 오나봐!!
+                <hr>
+                <b>익명2</b><br>
+                헐 덕우 부럽다... 나도 에스코트 받을래
+            </div>
+            <br>
+            <div id="float">
+                <b>오늘 학교에서 턱시도냥이 봤는데</b><br><br>
+                이름이 뭔가요?<br>
+                나이 좀 있어보이고 돼냥이었음<br><br>
+                <hr>
+                <b>익명1</b>
+                덕망이!!!
+                <hr>
+                <b>익명2</b>
+                덕망이 만났나보네!! 젠틀한 고양이야...
+            </div>
+        </article>
+    </section>
+    <footer>
+        <hr><br>
+        <div class="logo-container">
+            <a href="https://www.duksung.ac.kr/main.do" target="_blank">
+                <img src="logo.png" alt="Duksung University Logo" class="footer-logo">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
